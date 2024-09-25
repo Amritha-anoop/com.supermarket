@@ -1,0 +1,19 @@
+<suite name="parallel execution" thread-count="5" parallel="classes">
+<listeners>
+	<listener class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"></listener>
+	</listeners>
+	<test name= "login testing" thread-count="5" parallel="classes" >
+	
+	<classes>
+			<class name ="com.sevenrmartsupermarket.tests.LoginTest">
+			</class>
+		</classes>
+	</test>
+	<test name ="Admin test">
+	<classes>
+	<class name ="com.sevenrmartsupermarket.tests.AdminTest">
+	</class>
+	</classes>
+	</test>
+
+</suite>
