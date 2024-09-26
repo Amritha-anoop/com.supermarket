@@ -45,6 +45,8 @@ public class HomeTest extends  Base {
 		loginpage.login();
 		String color=homepage.getSubcategorybg();
 		System.out.println(color);
+		String expectedcolor="";
+		Assert.assertEquals(color, expectedcolor);
 	}
 	
 	@Test(groups ={"Smoke","Regression"})
@@ -54,6 +56,8 @@ public class HomeTest extends  Base {
 		loginpage.login();
 		String value = homepage.getlogosrcattribute();
 		System.out.println(value);	
+		String expectedvalue="";
+		Assert.assertEquals(value, expectedvalue);
 	}
 	
     @Test(groups ={"Smoke","Regression"})

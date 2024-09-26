@@ -53,8 +53,21 @@ public class SubCategoryTest extends Base {
 
 		loginpage.login();
 		homepage.clickOnSubcategory();
-
-		SubPage.clickOnNew().addCategory().addSubCategory("Phone").clickOnSave();
+        
+		SubPage.clickOnNew().addCategory("Appliance").addSubCategory("Phone").clickOnSave();
+		String successmsg= "";
 	}
 
+	
+	@Test
+	public void verifyImageUpload() {
+		loginpage = new LoginPage(driver);
+		homepage = new HomePage(driver);
+		SubPage = new SubCategoryPage(driver);
+
+		loginpage.login();
+		homepage.clickOnSubcategory();
+		
+		SubPage.imageupload();
+	}
 }

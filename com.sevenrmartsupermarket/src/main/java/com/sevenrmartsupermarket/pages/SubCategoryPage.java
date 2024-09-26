@@ -34,6 +34,12 @@ public class SubCategoryPage {
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement savebutton;
 	
+	@FindBy(xpath="//input[@id='main_img']")
+	private WebElement choosefile;
+	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	private WebElement subcategorysuccessmessage;
+	
 	public SubCategoryPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -53,8 +59,9 @@ public class SubCategoryPage {
 	  
    }
    
-   public SubCategoryPage addCategory() {
-	   pageutil.selectByVisibletext(category, "Apple");
+   public SubCategoryPage addCategory(String categoryitem) {
+	   
+	   pageutil.selectByVisibletext(category, categoryitem);
 	   return this;
    }
    
@@ -69,6 +76,11 @@ public class SubCategoryPage {
 	   waitutility.waitforElementtobeClickable(savebutton);
 	   savebutton.click();
 	   return this;
+   }
+   
+   public void imageupload() {
+	   String path = "C:\\Users\\_\\git\\repository2\\com.sevenrmartsupermarket\\src\\main\\resources\\Images";
+	   choosefile.sendKeys(path);
    }
  
    

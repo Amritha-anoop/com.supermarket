@@ -25,10 +25,9 @@ public class PageUtility {
 
 	}
 
-	public String selectByVisibletext(WebElement category, String visibletext) {
-		Select select = new Select(category);
-		 select.selectByVisibleText(visibletext);
-		 return visibletext;
+	public void selectByVisibletext( WebElement element,String visibletext) {
+		Select select = new Select(element);
+		select.selectByVisibleText(visibletext);
 	}
 
 	public void mouseClick(WebElement element) {
@@ -89,4 +88,6 @@ public class PageUtility {
 	public void imageupload(WebElement element) {
 
 	}
+
+	
 }
