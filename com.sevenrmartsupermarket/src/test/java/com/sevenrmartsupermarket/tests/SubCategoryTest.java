@@ -71,5 +71,6 @@ public class SubCategoryTest extends Base {
 		homepage.clickOnSubcategory();
 		
 		SubPage.imageupload();
+		Assert.assertTrue(false);
 	}
 }
