@@ -56,6 +56,7 @@ public class SubCategoryTest extends Base {
         
 		SubPage.clickOnNew().addCategory("Appliance").addSubCategory("Phone").clickOnSave();
 		String successmsg= "";
+		System.out.println("test");
 		Assert.assertTrue(false);
 	}
 
