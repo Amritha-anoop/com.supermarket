@@ -39,7 +39,7 @@ public class LoginTest extends Base {
 		
 		loginpage = new LoginPage(driver);
 		loginpage.isRemembermeCheckbox();
-		
+		Assert.assertEquals(false, null);
 	}
 	
 	@Test(groups ={"Smoke","Regression"})
@@ -56,7 +56,7 @@ public class LoginTest extends Base {
 	
 	/**login using data provider**/
 	@Test(dataProvider ="logindetails",dataProviderClass = Dataproviders.class)
-	public void verifyLoginDataprovider(String Username, String password) {
+	public void verifyLogin(String Username, String password) {
 		
 		loginpage = new LoginPage(driver);
 		loginpage.login(Username, password);
