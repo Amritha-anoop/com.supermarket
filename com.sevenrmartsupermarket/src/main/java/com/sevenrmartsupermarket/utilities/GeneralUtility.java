@@ -21,7 +21,6 @@ public class GeneralUtility {
 	}
 
 	public List<String> get_textofelements(List<WebElement> elements) {
-
 		List<String> data = new ArrayList<String>();
 		for (WebElement element : elements) {
 			data.add(element.getText());
@@ -30,12 +29,16 @@ public class GeneralUtility {
 	}
 
 	public static String getRandomFirstName() {
-
 		Faker faker = new Faker();
 		return faker.name().firstName();
 	}
-
+	
+	public static String getRandomCategory() {
+		Faker faker = new Faker();
+		return faker.name().title();
+	}
 	public static String getTimeStamp() {
 		return new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());
 	}
+
 }

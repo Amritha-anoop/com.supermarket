@@ -18,23 +18,16 @@ public class ScreenShotCapture {
 
 	public void takeScreenShot(WebDriver driver, String imageName) {
 		try {
-
 			takescreenshot = (TakesScreenshot) driver;
 			/** captures screenshot **/
 			File screenShot = takescreenshot.getScreenshotAs(OutputType.FILE);
-
 			/** System date and time **/
-
 			String timeStamp = GeneralUtility.getTimeStamp();
-
 			/** path of ssimage **/
 			String path = Constants.Screenshot_FILE_PATH + imageName + "_" + timeStamp + ".png";
-
 			File destination = new File(path);
 			/** move image to folder **/
-
 			FileHandler.copy(screenShot, destination);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
